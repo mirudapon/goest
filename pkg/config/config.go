@@ -58,6 +58,5 @@ func Load[T any]() (*T, error) {
 		}
 	}
 
-	cfg = &_cfg
 	return cfg.(*T), nil
 }
