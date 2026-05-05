@@ -5,11 +5,11 @@ import (
 	"goest/pkg/config"
 )
 
+type Config struct {
+	A int32 `env:"A"`
+}
+
 func main() {
-
-	config.Load()
-
-
 	fmt.Println("Hello, World!")
-	fmt.Println(config.Get())
+	fmt.Println(config.Load[Config]())
 }
